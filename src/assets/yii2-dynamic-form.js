@@ -87,8 +87,8 @@
 
         // remove "error/success" css class
         var yiiActiveFormData = $('#' + widgetOptions.formId).yiiActiveForm('data');
-        $template.find('.' + yiiActiveFormData.settings.errorCssClass).removeClass(yiiActiveFormData.settings.errorCssClass);
-        $template.find('.' + yiiActiveFormData.settings.successCssClass).removeClass(yiiActiveFormData.settings.successCssClass);
+        $template.find('.' + yiiActiveFormData?.settings?.errorCssClass).removeClass(yiiActiveFormData?.settings?.errorCssClass);
+        $template.find('.' + yiiActiveFormData?.settings?.successCssClass).removeClass(yiiActiveFormData?.settings?.successCssClass);
 
         return $template;
     };
@@ -208,7 +208,7 @@
 
                     widgetsOptions = widgetsOptions.reverse();
                     for (var i = identifiers.length - 1; i >= 1; i--) {
-                        identifiers[i] = $elem.closest(widgetsOptions[i].widgetItem).index();
+                        identifiers[i] = $elem.closest(widgetsOptions[0].widgetItem).index();
                     }
                 }
 
